@@ -6,9 +6,12 @@ public class Employee_Wage {
         Random rdm = new Random();           //rdm is veriable to store random number
         int present = rdm.nextInt(2);
         //Check if employee is present
+        int WagePerHr =20;
+        int wrkHrs = 8;
+        int dailyWage = present * WagePerHr * wrkHrs;
         if (present == 1)
-            System.out.println("Employee is present.");
+            System.out.println("Employee is present."+dailyWage);
         else
-            System.out.println("Employee is absent.");
+            System.out.println("Employee is absent."+dailyWage);
     }
 }
