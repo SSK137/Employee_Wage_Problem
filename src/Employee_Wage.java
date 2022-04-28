@@ -6,7 +6,13 @@ public class Employee_Wage {
     public static final int MAX_WORKING_DAYS = 20;
     public static final int WAGE_PER_HR = 20;
     public static final int MAX_WORKING_HRS = 100;
-    public void Compute_Wage(){
+    public void Compute_Wage(String Companyname, int WagePerHR, int MAX_WORKING_Days, int MAX_WORKING_HRs){
+
+        System.out.println("Details of " + Companyname + " employee");
+        System.out.println("Wage per hour:" + WagePerHR);
+        System.out.println("Maximum working days:" + MAX_WORKING_Days);
+        System.out.println("Maximum working hours:" + MAX_WORKING_HRs);
+
 
         Random rdm = new Random();           //rdm is veriable to store random number
         //Check if employee is present
@@ -43,7 +49,8 @@ public class Employee_Wage {
     public static void main(String[] args) {
         System.out.println("Welcome To Employee Wage Problems");
         Employee_Wage Emp_Wage = new Employee_Wage();
-        Emp_Wage.Compute_Wage();
+        Emp_Wage.Compute_Wage("Amazon",20,20,100);
+        Emp_Wage.Compute_Wage("FlipKart",20,15,200);
 
     }
 }
