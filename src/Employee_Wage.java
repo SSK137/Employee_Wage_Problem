@@ -6,9 +6,7 @@ public class Employee_Wage {
     public static final int MAX_WORKING_DAYS = 20;
     public static final int WAGE_PER_HR = 20;
     public static final int MAX_WORKING_HRS = 100;
-    public static void main(String[] args) {
-        System.out.println("Welcome To Employee Wage Problems");
-
+    public void Compute_Wage(){
 
         Random rdm = new Random();           //rdm is veriable to store random number
         //Check if employee is present
@@ -18,9 +16,8 @@ public class Employee_Wage {
         int day = 1, totalWorkingHrs = 0;
 
         for (day = 1, totalWorkingHrs = 0; day <= MAX_WORKING_DAYS
-                && totalWorkingHrs < MAX_WORKING_HRS; day++, totalWorkingHrs += workingHrs) {
+                && totalWorkingHrs <= MAX_WORKING_HRS; day++, totalWorkingHrs += workingHrs) {
             int present = rdm.nextInt(3);
-
 
             switch (present) {
                 case FULL_TIME:
@@ -42,5 +39,11 @@ public class Employee_Wage {
             totalWage += dailyWage;
         }
         System.out.println("Total wage for a month is " + totalWage);
+    }
+    public static void main(String[] args) {
+        System.out.println("Welcome To Employee Wage Problems");
+        Employee_Wage Emp_Wage = new Employee_Wage();
+        Emp_Wage.Compute_Wage();
+
     }
 }
